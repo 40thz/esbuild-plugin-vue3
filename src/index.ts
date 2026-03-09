@@ -148,7 +148,7 @@ function plugin({ templateOptions, scriptOptions, styleOptions }: Options = {}):
                         isProd
                     )
                     return {
-                        contents: styleCode,
+                        contents: `document.addEventListener('parseCompleted', () => {const style = document.createElement('style');style.textContent = ${JSON.stringify(styleCode)};document.querySelector('#content > div').append(style);})`,
                         errors,
                         resolveDir: dirname,
                         loader: 'js'
