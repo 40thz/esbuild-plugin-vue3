@@ -34,8 +34,6 @@
     },
     "dependencies": {
         "convert-source-map": "^1.8.0",
-        "esbuild-vue": "^1.2.2",
-        "fast-glob": "^3.3.3",
         "hash-sum": "^2.0.0"
     },
     "peerDependencies": {
